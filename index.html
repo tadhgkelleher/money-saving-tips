@@ -3,89 +3,304 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover the best money-saving tips to maximize your savings.">
-    <meta name="keywords" content="save money, budget tips, financial planning">
-    <meta name="author" content="Money Saving Tips">
-    <meta name="google-adsense-account" content="ca-pub-5470051995144012">
-    <title>Money Saving Tips - Home</title>
+    <title>Top Tech Deals – Must-Have Gadgets</title>
     <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #f8fafc;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --accent: #eef2ff;
+            --success: #22c55e;
+            --radius: 12px;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
             margin: 0;
             padding: 0;
-            background: #f9f9f9;
-            color: #333;
+            background-color: var(--secondary);
+            color: var(--text);
+            line-height: 1.6;
         }
 
-        header, footer {
-            background: #0073e6;
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
+            padding: 3em 1em;
             text-align: center;
-            padding: 1rem 0;
         }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            margin: 1rem 0;
-        }
-
-        nav ul li {
-            margin: 0 10px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-        }
-
-        main {
-            padding: 2rem;
+        .header-content {
             max-width: 800px;
             margin: 0 auto;
         }
 
-        h1, h2 {
-            color: #0073e6;
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-top: 1em;
+        }
+
+        .buying-guide {
+            background: white;
+            padding: 2em;
+            margin: 2em auto;
+            max-width: 1200px;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .buying-guide h2 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 2em auto;
+            padding: 0 1.5em;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2em;
+            margin-top: 2em;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -8px rgb(0 0 0 / 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-content {
+            padding: 1.5em;
+        }
+
+        .product-title {
+            font-size: 1.4em;
+            margin: 0 0 0.5em;
+            color: var(--text);
+        }
+
+        .product-specs {
+            background: var(--accent);
+            padding: 1em;
+            border-radius: var(--radius);
+            margin: 1em 0;
+            font-size: 0.9em;
+        }
+
+        .product-specs h4 {
+            margin: 0 0 0.5em;
+            color: var(--primary);
+        }
+
+        .specs-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .specs-list li {
+            margin-bottom: 0.3em;
+            display: flex;
+            align-items: center;
+        }
+
+        .specs-list li::before {
+            content: "•";
+            color: var(--primary);
+            margin-right: 0.5em;
+        }
+
+        .price-tag {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: var(--success);
+            margin: 1em 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 0.8em 1.5em;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-dark);
+        }
+
+        footer {
+            background-color: var(--text);
+            color: white;
+            text-align: center;
+            padding: 2em;
+            margin-top: 4em;
+        }
+
+        .disclaimer {
+            font-size: 0.9em;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 2em auto;
+            text-align: center;
+            padding: 0 1em;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 2em 1em;
+            }
+            
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5470051995144012" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <h1>Money Saving Tips</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h2>Welcome to Money Saving Tips</h2>
-        <p>Learn the best strategies to save money in your everyday life. From groceries to travel, we’ve got you covered with practical tips that make a difference.</p>
-        <p>Start exploring our blog for actionable advice to help you maximize your savings.</p>
-
-        <!-- Example of AdSense Ad unit -->
-        <div style="text-align:center; margin:20px 0;">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-5470051995144012"
-                 data-ad-slot="XXXXXXX"
-                 data-ad-format="auto"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+        <div class="header-content">
+            <h1>Top Tech Deals of 2025</h1>
+            <p>Curated selection of premium gadgets at the best prices. Each product thoroughly tested and reviewed by our tech experts.</p>
         </div>
+    </header>
 
+    <div class="buying-guide">
+        <h2>Smart Shopping Guide</h2>
+        <p>Before making your purchase, consider these key factors:</p>
+        <ul>
+            <li>Check compatibility with your existing devices</li>
+            <li>Compare warranty coverage across retailers</li>
+            <li>Read recent user reviews for real-world experiences</li>
+            <li>Consider future-proofing features for longevity</li>
+        </ul>
+    </div>
+
+    <main>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="/api/placeholder/600/400" alt="Apple AirPods Pro" class="product-image">
+                <div class="product-content">
+                    <h2 class="product-title">Apple AirPods Pro (2nd Gen)</h2>
+                    <div class="product-specs">
+                        <h4>Key Features</h4>
+                        <ul class="specs-list">
+                            <li>Active Noise Cancellation</li>
+                            <li>Transparency Mode</li>
+                            <li>Personalized Spatial Audio</li>
+                            <li>Up to 6 hours listening time</li>
+                            <li>MagSafe Charging Case</li>
+                        </ul>
+                    </div>
+                    <p>Perfect for iPhone users seeking premium audio quality. Features improved noise cancellation and better battery life than the previous generation.</p>
+                    <div class="price-tag">$249.99</div>
+                    <a href="#" class="cta-button">View Deal</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="/api/placeholder/600/400" alt="Anker PowerCore" class="product-image">
+                <div class="product-content">
+                    <h2 class="product-title">Anker PowerCore 26800mAh</h2>
+                    <div class="product-specs">
+                        <h4>Key Features</h4>
+                        <ul class="specs-list">
+                            <li>26800mAh High Capacity</li>
+                            <li>Triple USB Output</li>
+                            <li>Multi-Device Charging</li>
+                            <li>18-Month Warranty</li>
+                            <li>Advanced Safety Features</li>
+                        </ul>
+                    </div>
+                    <p>Ideal for travelers and power users. Can charge most phones 6-7 times or a tablet 2-3 times on a single charge.</p>
+                    <div class="price-tag">$59.99</div>
+                    <a href="#" class="cta-button">View Deal</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="/api/placeholder/600/400" alt="Fitbit Charge 5" class="product-image">
+                <div class="product-content">
+                    <h2 class="product-title">Fitbit Charge 5</h2>
+                    <div class="product-specs">
+                        <h4>Key Features</h4>
+                        <ul class="specs-list">
+                            <li>Built-in GPS</li>
+                            <li>ECG App & EDA Scan</li>
+                            <li>24/7 Heart Rate Monitoring</li>
+                            <li>Sleep Tracking</li>
+                            <li>7-Day Battery Life</li>
+                        </ul>
+                    </div>
+                    <p>Advanced health metrics in a sleek design. Perfect for fitness enthusiasts who want detailed health insights.</p>
+                    <div class="price-tag">$149.99</div>
+                    <a href="#" class="cta-button">View Deal</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="/api/placeholder/600/400" alt="iRobot Roomba 692" class="product-image">
+                <div class="product-content">
+                    <h2 class="product-title">iRobot Roomba 692</h2>
+                    <div class="product-specs">
+                        <h4>Key Features</h4>
+                        <ul class="specs-list">
+                            <li>3-Stage Cleaning System</li>
+                            <li>Smart Home Compatible</li>
+                            <li>Auto-Adjust Cleaning Head</li>
+                            <li>Dirt Detect Technology</li>
+                            <li>90-Minute Runtime</li>
+                        </ul>
+                    </div>
+                    <p>Efficient cleaning for all floor types. Great for pet owners and busy households seeking automated cleaning solutions.</p>
+                    <div class="price-tag">$299.99</div>
+                    <a href="#" class="cta-button">View Deal</a>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <div class="disclaimer">
+        <p>Prices and availability are subject to change. We regularly update our deals to ensure you get the best value. Some links may be affiliate links, meaning we earn a small commission at no extra cost to you.</p>
+    </div>
+
     <footer>
-        <p>&copy; 2025 Money Saving Tips. All Rights Reserved.</p>
+        <p>&copy; 2025 Top Tech Deals | All rights reserved</p>
+        <p>Prices last updated: January 20, 2025</p>
     </footer>
 </body>
 </html>
